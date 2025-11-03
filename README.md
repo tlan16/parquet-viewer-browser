@@ -2,6 +2,8 @@
 
 A high-performance static single page application for viewing and analyzing Parquet files directly in the browser.
 
+Demo: https://tlan16.github.io/parquet-viewer-browser/
+
 ## Features
 
 - 📊 **Upload Parquet Files**: Drag-and-drop or click to upload `.parquet` files
