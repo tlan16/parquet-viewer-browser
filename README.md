@@ -160,4 +160,4 @@ parquet-viewer-browser/
 
 ## License
 
-MIT
+See [LICENSE](/LICENSE)
