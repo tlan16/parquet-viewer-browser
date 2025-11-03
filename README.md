@@ -27,6 +27,38 @@ A high-performance static single page application for viewing and analyzing Parq
 - [Bun](https://bun.sh/) installed (or Node.js 18+ with npm/yarn)
 - Docker and Docker Compose (for containerized development)
 
+## Deployment
+
+### GitHub Pages
+
+This project includes a GitHub Actions workflow that automatically builds and deploys to GitHub Pages on every push to the `main` branch.
+
+#### Setup Instructions:
+
+1. **Enable GitHub Pages in your repository:**
+   - Go to your repository Settings → Pages
+   - Under "Build and deployment", select "GitHub Actions" as the source
+
+2. **Configure base path (if needed):**
+   - If your repository name is not your GitHub username, update the workflow:
+   ```yaml
+   # In .github/workflows/deploy.yml, add to the Build step:
+   - name: Build
+     run: bun run build
+     env:
+       VITE_BASE_PATH: /your-repo-name/
+   ```
+
+3. **Push to main branch:**
+   - The workflow will automatically trigger and deploy your site
+   - Your site will be available at: `https://your-username.github.io/your-repo-name/`
+
+The workflow will:
+- Install dependencies using Bun
+- Build the production bundle
+- Deploy to GitHub Pages
+- Make the site available at your GitHub Pages URL
+
 ## Getting Started
 
 ### Local Development (with Bun)
