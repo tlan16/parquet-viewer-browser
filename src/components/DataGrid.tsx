@@ -4,7 +4,6 @@ import DataEditor, {
   GridColumn,
   Item,
   GridCellKind,
-  DataEditorRef,
 } from '@glideapps/glide-data-grid';
 import '@glideapps/glide-data-grid/dist/index.css';
 import { ParquetData, SortConfig, FilterConfig } from '../types';
@@ -172,7 +171,7 @@ export function DataGrid({ data, onReset }: DataGridProps) {
             columns={columns}
             rows={processedRows.length}
             getCellContent={getCellContent}
-            onColumnHeaderClick={onColumnHeaderClick}
+            onHeaderClicked={onColumnHeaderClick}
             smoothScrollX={true}
             smoothScrollY={true}
             freezeColumns={0}
